@@ -144,13 +144,20 @@
       text-align: center;
     }
 
-    .quote {
-      font-family: 'Playfair Display', serif;
-      font-style: italic;
+    .waze-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #05C8F7;
+      color: #0e0922;
+      font-weight: 600;
       font-size: 14px;
-      color: #7F77DD;
-      line-height: 1.6;
+      padding: 10px 22px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: opacity 0.2s;
     }
+    .waze-btn:hover { opacity: 0.85; }
 
     .conf {
       position: absolute;
@@ -201,7 +208,7 @@
           <div class="icon-circle">🕙</div>
           <div>
             <p class="detail-label">Hora</p>
-            <p class="detail-value">10:15 AM</p>
+            <p class="detail-value">10:00 AM</p>
           </div>
         </div>
         <div class="detail-row">
@@ -214,7 +221,9 @@
       </div>
 
       <div class="footer">
-        <p class="quote">"El éxito es la suma de pequeños esfuerzos<br>repetidos día tras día."</p>
+        <a class="waze-btn" href="https://waze.com/ul/h9fxdgrrss" target="_blank" rel="noopener">
+          🗺️ Cómo llegar en Waze
+        </a>
       </div>
 
     </div>
