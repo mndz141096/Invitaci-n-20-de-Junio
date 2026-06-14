@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Graduación — Juan Alberto Méndez Urizar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      background: #0e0922;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 460px;
+      background: #1a1035;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid #3C3489;
+    }
+
+    /* TOP SECTION */
+    .top {
+      background: #261850;
+      padding: 2.5rem 2rem 2rem;
+      text-align: center;
+    }
+
+    .stars {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 7px;
+      margin-bottom: 1.4rem;
+    }
+    .star {
+      width: 6px; height: 6px;
+      background: #EF9F27;
+      border-radius: 50%;
+    }
+    .star.big {
+      width: 9px; height: 9px;
+      background: #FAC775;
+    }
+
+    .cap {
+      font-size: 36px;
+      margin-bottom: 0.6rem;
+    }
+
+    .eyebrow {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #5DCAA5;
+      margin-bottom: 1rem;
+    }
+
+    .name {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      font-weight: 400;
+      color: #FAC775;
+      line-height: 1.25;
+      margin-bottom: 0.4rem;
+    }
+
+    .career {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 17px;
+      color: #9FE1CB;
+      margin-bottom: 1.6rem;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 1.4rem;
+    }
+    .divider-line { flex: 1; height: 1px; background: #534AB7; }
+    .divider-dot { width: 5px; height: 5px; background: #EF9F27; border-radius: 50%; }
+
+    .invite-text {
+      font-size: 14px;
+      color: #AFA9EC;
+      font-style: italic;
+    }
+
+    /* BODY SECTION */
+    .body {
+      padding: 1.8rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .detail-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .icon-circle {
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      background: #261850;
+      border: 1px solid #3C3489;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 18px;
+    }
+
+    .detail-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #5DCAA5;
+      margin-bottom: 3px;
+    }
+
+    .detail-value {
+      font-size: 15px;
+      font-weight: 500;
+      color: #F1EFE8;
+    }
+
+    /* FOOTER */
+    .footer {
+      border-top: 1px solid #3C3489;
+      padding: 1.4rem 2rem;
+      text-align: center;
+    }
+
+    .quote {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 14px;
+      color: #7F77DD;
+      line-height: 1.6;
+    }
+
+    .conf {
+      position: absolute;
+      pointer-events: none;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      overflow: hidden;
+      border-radius: 20px;
+    }
+
+    .wrapper { position: relative; }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="card">
+
+      <div class="top">
+        <div class="stars">
+          <div class="star"></div>
+          <div class="star big"></div>
+          <div class="star"></div>
+          <div class="star big"></div>
+          <div class="star"></div>
+        </div>
+        <div class="cap">🎓</div>
+        <p class="eyebrow">Ceremonia de Graduación</p>
+        <h1 class="name">Juan Alberto<br>Méndez Urizar</h1>
+        <p class="career">Economista</p>
+        <div class="divider">
+          <div class="divider-line"></div>
+          <div class="divider-dot"></div>
+          <div class="divider-line"></div>
+        </div>
+        <p class="invite-text">Te invita a compartir este momento especial</p>
+      </div>
+
+      <div class="body">
+        <div class="detail-row">
+          <div class="icon-circle">📅</div>
+          <div>
+            <p class="detail-label">Fecha</p>
+            <p class="detail-value">Sábado 20 de junio, 2026</p>
+          </div>
+        </div>
+        <div class="detail-row">
+          <div class="icon-circle">🕙</div>
+          <div>
+            <p class="detail-label">Hora</p>
+            <p class="detail-value">10:15 AM</p>
+          </div>
+        </div>
+        <div class="detail-row">
+          <div class="icon-circle">📍</div>
+          <div>
+            <p class="detail-label">Lugar</p>
+            <p class="detail-value">Aula Magna S8</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <p class="quote">"El éxito es la suma de pequeños esfuerzos<br>repetidos día tras día."</p>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
