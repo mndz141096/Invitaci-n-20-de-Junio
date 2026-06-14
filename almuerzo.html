@@ -48,8 +48,6 @@
       transform: rotate(45deg);
     }
 
-    .icon { font-size: 34px; margin-bottom: 0.7rem; }
-
     .eyebrow {
       font-size: 11px;
       letter-spacing: 3px;
@@ -67,19 +65,12 @@
       margin-bottom: 0.4rem;
     }
 
-    .subtitle {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-size: 17px;
-      color: #D4956A;
-      margin-bottom: 1.6rem;
-    }
-
     .divider {
       display: flex;
       align-items: center;
       gap: 10px;
       margin-bottom: 1.4rem;
+      margin-top: 1.4rem;
     }
     .divider-line { flex: 1; height: 1px; background: #6B3A1F; }
     .divider-dot { width: 5px; height: 5px; background: #E8A84A; border-radius: 50%; }
@@ -149,6 +140,54 @@
       transition: opacity 0.2s;
     }
     .waze-btn:hover { opacity: 0.85; }
+
+    .rsvp {
+      border-top: 1px solid #6B3A1F;
+      padding: 1.4rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .rsvp-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #C07B3A;
+      text-align: center;
+      margin-bottom: 2px;
+    }
+    .rsvp input {
+      width: 100%;
+      padding: 10px 14px;
+      border-radius: 50px;
+      border: 1px solid #6B3A1F;
+      background: #2E1A0E;
+      color: #F1EDE4;
+      font-size: 14px;
+      outline: none;
+      font-family: 'Inter', sans-serif;
+    }
+    .rsvp input::placeholder { color: #7A5A3A; }
+    .rsvp input:focus { border-color: #E8A84A; }
+    .whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: #25D366;
+      color: #fff;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 10px 22px;
+      border-radius: 50px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: opacity 0.2s;
+      width: 100%;
+      font-family: 'Inter', sans-serif;
+    }
+    .whatsapp-btn:hover { opacity: 0.85; }
   </style>
 </head>
 <body>
@@ -161,10 +200,8 @@
         <div class="orn-diamond"></div>
         <div class="orn-line"></div>
       </div>
-      
       <p class="eyebrow">Almuerzo de Celebración</p>
       <h1 class="name">Juan Alberto<br>Méndez Urizar</h1>
-      
       <div class="divider">
         <div class="divider-line"></div>
         <div class="divider-dot"></div>
@@ -197,6 +234,12 @@
       </div>
     </div>
 
+    <div class="rsvp">
+      <button class="whatsapp-btn" onclick="confirmar()">
+        ✅ ¡Sí asistiré!
+      </button>
+    </div>
+
     <div class="footer">
       <a class="waze-btn" href="https://waze.com/ul/h9fxdu027z" target="_blank" rel="noopener">
         🗺️ Cómo llegar en Waze
@@ -204,6 +247,14 @@
     </div>
 
   </div>
+
+  <script>
+    function confirmar() {
+      var mensaje = '¡Sí asistiré al almuerzo de celebración de Juan Alberto Méndez Urizar el sábado 20 de junio a la 1:00 PM!';
+      var url = 'https://wa.me/50234005049?text=' + encodeURIComponent(mensaje);
+      window.open(url, '_blank');
+    }
+  </script>
 
 </body>
 </html>
